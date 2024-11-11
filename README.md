@@ -1,6 +1,8 @@
 # ETL-Weather
 
-Project structure
+This project is an end-to-end data pipeline for extracting, transforming, and loading (ETL) weather data using Apache Airflow, PostgreSQL, and Docker. The goal of this project is to automate the process of fetching weather data from an API, transforming it, and storing it in a PostgreSQL database for analysis.
+
+## Project structure
 ```bash
 ├───dags
 |   └───etlweather.py
