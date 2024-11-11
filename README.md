@@ -22,13 +22,11 @@ Project structure
 Before you get started, ensure that you have the following installed:
 
 - Docker
-- Docker Compose
 - Python 3.x
 
 ## Installation
 
 1. **Clone the repository**:
-
    ```bash
    git clone https://github.com/yourusername/weather-etl-airflow.git
    cd weather-etl-airflow
@@ -63,24 +61,25 @@ If you make any changes to the code, restart Airflow:
 ```bash
 astro dev restart
 ```
-Folder Details
-`dags/`: Contains the DAG files that define the ETL pipeline. The primary file is etlweather.py, which orchestrates the extraction, transformation, and loading of weather data.
 
-`example_astronauts.py:` This DAG shows a simple ETL pipeline example that queries the list of astronauts currently in space from the Open Notify API and prints a statement for each astronaut. The DAG uses the TaskFlow API to define tasks in Python, and dynamic task mapping to dynamically print a statement for each astronaut.
+## Folder Details
+* `dags/`: Contains the DAG files that define the ETL pipeline. The primary file is etlweather.py, which orchestrates the extraction, transformation, and loading of weather data.
 
-`tests/`: Contains test files for verifying the functionality of the DAGs.
+* `example_astronauts.py:` This DAG shows a simple ETL pipeline example that queries the list of astronauts currently in space from the Open Notify API and prints a statement for each astronaut. The DAG uses the TaskFlow API to define tasks in Python, and dynamic task mapping to dynamically print a statement for each astronaut.
 
-`.gitignore`: Specifies files and directories to be ignored by Git (e.g., virtual environments, Docker files, etc.).
+* `tests/`: Contains test files for verifying the functionality of the DAGs.
 
-`airflow_settings.yaml`: Contains Airflow configuration settings.
+* `.gitignore`: Specifies files and directories to be ignored by Git (e.g., virtual environments, Docker files, etc.).
 
-`docker-compose.yaml`: Defines the services, networks, and volumes for running PostgreSQL and Airflow using Docker Compose.
+* `airflow_settings.yaml`: Contains Airflow configuration settings.
 
-`Dockerfile`: This file contains a versioned Astro Runtime Docker image that provides a differentiated Airflow experience.
+* `docker-compose.yaml`: Defines the services, networks, and volumes for running PostgreSQL and Airflow using Docker Compose.
 
-`airflow_settings.yaml`: Use this local-only file to specify Airflow Connections, Variables, and Pools instead of entering them in the Airflow UI as you develop DAGs in this project.
+* `Dockerfile`: This file contains a versioned Astro Runtime Docker image that provides a differentiated Airflow experience.
 
-`requirements.txt`: Lists the Python dependencies for the project, including Airflow and other required libraries.
+* `airflow_settings.yaml`: Use this local-only file to specify Airflow Connections, Variables, and Pools instead of entering them in the Airflow UI as you develop DAGs in this project.
+
+* `requirements.txt`: Lists the Python dependencies for the project, including Airflow and other required libraries.
 
 # License
 - This project is licensed under the MIT License - see the LICENSE file for details.
